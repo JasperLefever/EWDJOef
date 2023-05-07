@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Beer Result</title>
+</head>
+<body>
+<h4 th:text="|Got beer color ${beerCommand.colorSelected}|"></h4>
+
+    <ul th:each="beer: ${listBeer}">
+        <li th:text="${beer}"></li>
+    </ul>
+
+</body>
+</html>

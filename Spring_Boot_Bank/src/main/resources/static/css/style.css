@@ -1,0 +1,11 @@
+body { 
+    background-color: #FDF5E6 
+}
+
+img{
+    float: right;
+}
+
+.error{
+    color: #f33;
+}

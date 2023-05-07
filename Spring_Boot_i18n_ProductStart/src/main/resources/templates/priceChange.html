@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<form th:action="@{/increaseDecrease}" th:object="${price}" method="post">
+  <p>
+    <label>Percent Increase
+      <input type="text" th:field="*{percentIncrease}" size="25"/>
+    </label>
+    <span th:if="${#fields.hasErrors('percentIncrease')}" th:errorclass="error" th:errors="*{percentIncrease}"></span>
+  </p>
+
+  <p>
+    <label>Percent Decrease
+      <input type="text" th:field="*{percentDecrease}"  size="25"/>
+    </label>
+    <span th:if="${#fields.hasErrors('percentDecrease')}" th:errorclass="error" th:errors="*{percentDecrease}"></span>
+  </p>
+  <p>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </p>
+
+</form>
+</body>
+</html>

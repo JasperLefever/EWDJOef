@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Numbers</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<form th:action="@{/numbers}" th:object="${numbers}" method="post">
+
+		<p>
+			<label>Amount:</label>
+			<input type="text" th:field="*{amount}" size="7" maxLength="10"/>
+		    <span th:if="${#fields.hasErrors('amount')}" th:errorclass="error" th:errors="*{amount}"></span>
+		</p>
+		
+		<p>
+			<label>Number1:</label>
+			<input type="text" th:field="*{number1}" size="7" maxLength="10"/>
+			<span th:if="${#fields.hasErrors('number1')}" th:errorclass="error" th:errors="*{number1}"></span>
+		</p>
+		
+		<p>
+			<label>Number2:</label>
+			<input type="text" th:field="*{number2}" size="7" maxLength="10"/>
+			<span th:if="${#fields.hasErrors('number2')}" th:errorclass="error" th:errors="*{number2}"></span>
+		</p>
+		
+		<p>
+			<button type="submit">Submit</button>
+		</p>
+
+	</form>
+
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Students</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+    <h2 th:text="|Hello ${username}|"></h2>
+	<h2 th:text="${userListRoles}"></h2>
+
+	<th:block th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+		<h2>ADMIN</h2>
+	</th:block>
+	<th:block
+		th:unless="${#authorization.expression('hasRole(''ADMIN'')')}">
+		<h3>GEEN ADMIN</h3>
+	</th:block>
+
+    <form th:action="@{/logout}" method="post">
+		<input type="submit" value="Logout" /> 
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+	</form>
+	
+</body>
+</html>

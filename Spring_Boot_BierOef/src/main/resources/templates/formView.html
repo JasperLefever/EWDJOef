@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/beer}" th:object="${beerCommand}" method="post">Choose Color:
+    <select th:field="*{colorSelected}">
+        <option th:each="color : ${colorList}" th:value="${color}" th:text="${color}"></option>
+
+    </select>
+    <button type="submit">Ok</button>
+</form>
+</body>
+</html>

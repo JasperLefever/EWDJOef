@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Students</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+   <h1 th:text="|Hello ${username}|"></h1>
+
+    <h2>Students</h2>
+	<table>
+		<tr>
+		    <th>Index</th>
+			<th>Count</th>
+			<th>Name</th>
+			<th>Lastname</th>
+		</tr>
+
+        <th:block th:each="student,iter: ${studentList}">
+			<tr>
+			    <td th:text="${iter.index}"></td>
+			    <td th:text="${iter.count}"></td>
+				<td>
+				<a th:href="|/students/${student.id}|" th:text="${student.lastname}"></a>
+				</td>
+				<td th:text="${student.firstname}"></td>
+			</tr>
+		</th:block>
+
+	</table>
+	<br>
+   <form th:action="@{/logout}" method="post">
+	   <input type="submit" value="Logout" />
+
+	   <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+   </form>
+</body>
+</html>

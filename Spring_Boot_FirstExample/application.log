@@ -1,0 +1,19 @@
+2023-04-09T17:07:15.186+02:00  INFO 1448 --- [restartedMain] c.s.SpringBootFirstExampleApplication    : Starting SpringBootFirstExampleApplication using Java 17.0.4.1 with PID 1448 (C:\Users\jaspe\Documents\TI2S2\Enterprice Web Development Java\IntelIJWorkspace\Spring_Boot_FirstExample\target\classes started by jaspe in C:\Users\jaspe\Documents\TI2S2\Enterprice Web Development Java\IntelIJWorkspace\Spring_Boot_FirstExample)
+2023-04-09T17:07:15.188+02:00 DEBUG 1448 --- [restartedMain] c.s.SpringBootFirstExampleApplication    : Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-09T17:07:15.188+02:00  INFO 1448 --- [restartedMain] c.s.SpringBootFirstExampleApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T17:07:15.236+02:00  INFO 1448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T17:07:15.236+02:00  INFO 1448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T17:07:16.120+02:00  INFO 1448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T17:07:16.128+02:00  INFO 1448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T17:07:16.129+02:00  INFO 1448 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T17:07:16.278+02:00  INFO 1448 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-04-09T17:07:16.282+02:00  INFO 1448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T17:07:16.283+02:00  INFO 1448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
+2023-04-09T17:07:16.603+02:00  INFO 1448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T17:07:16.641+02:00  INFO 1448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T17:07:16.649+02:00  INFO 1448 --- [restartedMain] c.s.SpringBootFirstExampleApplication    : Started SpringBootFirstExampleApplication in 1.843 seconds (process running for 2.436)
+2023-04-09T17:07:20.709+02:00  INFO 1448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T17:07:20.710+02:00  INFO 1448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T17:07:20.712+02:00  INFO 1448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-09T17:07:20.786+02:00  INFO 1448 --- [http-nio-8080-exec-2] c.s.HelloController                      : get hello
+2023-04-09T17:07:23.433+02:00  INFO 1448 --- [http-nio-8080-exec-3] c.s.HelloController                      : post hello with name: jasper

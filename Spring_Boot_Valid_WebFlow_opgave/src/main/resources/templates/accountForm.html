@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Example Spring Web Flow</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Example Spring Web Flow</h1>
+
+
+
+<form method="post" th:action="@{/account}" th:object="${account}">
+	<div class="error" th:if="${#fields.hasErrors()}">
+		<ul>
+			<li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
+		</ul>
+	</div>
+    <p>
+        <label>Balance:</label> <input size="20" th:field="*{balance}" type="text"> <span th:if="${#fields.hasErrors('balance')}" th:errorclass="error" th:errors="*{balance}"></span>
+    </p>
+
+    <p>
+        <label>Percent:</label> <input size="20" th:field="*{percent}" type="text"> <span th:if="${#fields.hasErrors('percent')}" th:errorclass="error" th:errors="*{percent}"></span>
+    </p>
+
+    <p>
+        <label>Email:</label> <input size="20" th:field="*{email}" type="text"> <span th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}"></span>
+    </p>
+
+    <p>
+        <button type="submit">OK</button>
+    </p>
+
+</form>
+
+</body>
+</html>

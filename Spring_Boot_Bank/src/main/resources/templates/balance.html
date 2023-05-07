@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<img th:src="@{/img/money-euro.png}"/>
+<ul>
+    <li th:text="|First name: ${customer.firstname}|"></li>
+    <li th:text="|Last name: ${customer.lastname}|"></li>
+    <li th:text="|ID: ${customer.id}|"></li>
+    <li th:text="|Balance: ${#numbers.formatDecimal(customer.balance,1, 'POINT', 2, 'COMMA'  )} euro|"></li>
+</ul>
+</body>
+</html>

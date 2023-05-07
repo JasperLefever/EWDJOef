@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Error</title>
+</head>
+<body>
+
+<h1 th:if="${errCode}" th:text="|${errCode} : System Errors|"></h1>
+
+<h1 th:unless="${errCode}">System Errors</h1>
+
+<h4 th:if="${errMsg}" th:text="${errMsg}"></h4>
+
+</body>
+</html>

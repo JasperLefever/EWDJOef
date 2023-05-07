@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Example</title>
+</head>
+<body>
+
+<h4>EL:</h4>
+<p th:text="${account.balance}"></p>
+<p th:text="${account.percent}"></p>
+
+<h4>Thymeleaf: double curly braces:</h4>
+ <p th:text="${{account.balance}}"></p>
+<p th:text="${{account.percent}}"></p>
+
+<h4>Thymeleaf</h4>
+<!--  <p th:text="${#numbers.formatDecimal(account.balance2,3,'COMMA',2,'POINT')}"></p>
+      <p th:text="${#numbers.formatPercent(account.percent2, 1, 0)}"></p>   -->
+
+</body>
+</html>

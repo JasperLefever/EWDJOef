@@ -1,0 +1,40 @@
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th {
+    border: 1px solid;
+}
+th {
+    background-color: #ffbb00;
+}
+
+label{
+   display: inline-block;
+   width: 10em;
+   text-align: right;
+   margin: 0.25em;
+   font-weight: bold;
+}
+
+input[type="submit"],input[type="reset"]  {
+   width: 100px;
+   height:30px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   border: 1px solid #999;
+}
+
+.error{
+    color:red;
+}
+
+p{
+  display: table;
+}
+
+span{
+    display: table-cell;
+}

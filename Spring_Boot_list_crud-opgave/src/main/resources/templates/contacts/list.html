@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Show Contacts</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h2>Show Contacts</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Description</th>
+        <th>BirthDay</th>
+    </tr>
+
+    <th:block th:each="contact: ${contactList}">
+        <tr>
+            <td><a th:href="|/contacts/${contact.id}|" th:text="${contact.firstname}"></a>
+            </td>
+
+            <td th:text="${contact.lastname}"></td>
+            <td th:text="${contact.description}"></td>
+
+            <td th:text="${{contact.birthDate}}"></td>
+
+            <!-- oplossing zonder DateFormatter -->
+            <!-- <td th:with="df=#{date.format.pattern}" th:text="${#temporals.format(contact.birthDate, df)}"></td>  -->
+
+        </tr>
+    </th:block>
+
+</table>
+</body>
+</html>

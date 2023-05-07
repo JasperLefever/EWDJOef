@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+        <h1>Example Spring Validation</h1>
+
+        <form th:action="@{/registration}" th:object="${registration}" method="post">
+
+        <p>
+            <label>User Name:</label>
+            <input type="text" th:field="*{userName}" placeholder="username" size="20"/>
+            <span th:if="${#fields.hasErrors('userName')}" th:errorclass="error" th:errors="*{userName}"></span>
+        </p>
+       
+        <p>
+            <label>Password:</label>
+            <input type="password" th:field="*{password}" placeholder="password" size="20"/>
+            <span th:if="${#fields.hasErrors('password')}" th:errorclass="error" th:errors="*{password}"></span>
+        </p>
+       
+        <p>
+            <label>Confirm Password:</label>
+            <input type="password" th:field="*{confirmPassword}" placeholder="confirm password" size="20"/>
+            <span th:if="${#fields.hasErrors('confirmPassword')}" th:errorclass="error" th:errors="*{confirmPassword}"></span>
+        </p>
+
+        <p>
+            <label>Email:</label>
+            <input type="text" th:field="*{email}" placeholder="email" size="20"/>
+            <span th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}"></span>
+        </p>
+        
+		<button type="submit">OK</button>
+
+        </form>
+
+
+
+</body>
+</html>

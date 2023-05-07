@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>School</title>
+</head>
+<body>
+
+    <h3>DOCENT</h3>
+    FindAll
+	<p th:each="docent: ${docentList}" th:text="${docent}"></p>
+	<br> 
+	<h3>CAMPUS</h3>
+	FindAll
+	<p th:text="${campusList}"></p>
+	<br>
+	<h3>WERKRUIMTE</h3>
+	FindAll
+	<p th:text="${werkruimteList}"></p>
+	 
+</body>
+</html>

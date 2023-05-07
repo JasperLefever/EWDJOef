@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student</title>
+</head>
+<body>
+<table>
+		<tr>
+			<td>Name</td>
+			<td th:text="${student.firstname}"></td>
+		</tr>
+		<tr>
+			<td>Lastname</td>
+			<td th:text="${student.lastname}"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td th:text="${student.email}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

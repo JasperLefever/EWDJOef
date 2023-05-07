@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Guest</title>
+</head>
+<body>
+
+	<h3>GUEST!</h3>
+	FindAll
+	<p th:text="${guestList}"></p>
+	<br> 
+	findByName
+	<p th:text="${guestName}"></p>
+	<br> 
+	findByFirstname
+	<p th:text="${guestFirstname}"></p>
+	
+
+	<br> 
+	findByNameStartingWith
+	<p th:text="${guestList2}"></p>
+	
+	<br> 
+	findByNameStartingWith2 NamedQuery
+	<p th:text="${guestList3}"></p>
+
+	 
+</body>
+</html>

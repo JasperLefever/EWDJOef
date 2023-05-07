@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <!-- you can include a JavaScript file using the script tag with the src attribute in a Thymeleaf template -->
+    <!-- <script th:src="@{/scripts/yourJavascriptFile.js}"></script>  -->
+
+    <link rel="stylesheet"
+          href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    $(function () {
+        var dateFormat = '[[#{date.format.patternjs}]]';
+        $("#datepicker").datepicker({
+            dateFormat: dateFormat
+            // set the date format option in datepicker
+        });
+    });
+</script>
+
+<h1 th:text="${contact.id} == null ? #{label_contact_new} : #{label_contact_update}"></h1>
+
+<form th:object="${contact}" method="post">
+
+
+    <p th:if="${message}" th:class="${message.type}" th:text="${message.text}"></p>
+
+    <p>
+        <label th:text="#{label_contact_first_name}"></label> <input
+            type="text" th:field="*{firstname}" size="20"/> <span
+            th:if="${#fields.hasErrors('firstname')}" th:errorclass="error"
+            th:errors="*{firstname}"></span>
+    </p>
+
+    <p>
+        <label th:text="#{label_contact_last_name}"></label> <input
+            type="text" th:field="*{lastname}" size="20"/> <span
+            th:if="${#fields.hasErrors('lastname')}" th:errorclass="error"
+            th:errors="*{lastname}"></span>
+    </p>
+
+    <p>
+        <label th:text="#{label_contact_birth_date}"></label> <input
+            type="text" id="datepicker" th:field="*{birthDate}"/>
+    </p>
+
+    <!-- oplossing zonder DateFormatter -->
+    <!--
+    <p>
+        <label th:text="#{label_contact_birth_date}"></label>
+        <input type="text" id="datepicker" name="birthDate"
+           th:with="df=#{date.format.pattern}"
+           th:value="${#temporals.format(contact.birthDate, df, #locale)}"
+           value="placeholder" />
+    </p>  -->
+
+    <p>
+        <label th:text="#{label_contact_description}"></label> <input
+            type="text" th:field="*{description}" size="20"/> <span
+            th:if="${#fields.hasErrors('description')}" th:errorclass="error"
+            th:errors="*{description}"></span>
+    </p>
+
+    <button type="submit">Save</button>
+
+    <button type="reset">Reset</button>
+
+</form>
+</body>
+</html>

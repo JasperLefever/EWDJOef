@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="#{titleWelcome}">Internationalization</title>
+</head>
+<body>
+
+    <h2 th:text="#{welcome.message}"></h2>
+
+
+    <p th:with="df=#{date.format.pattern}" th:text="${#dates.format(today, df)}"></p>
+
+    <p th:with="df=#{date.format.pattern}" th:text="${#temporals.format(todayLocalDate, df)}"></p>
+ 
+    <p th:text="|Locale : ${#locale}|"></p>
+
+</body>
+</html>

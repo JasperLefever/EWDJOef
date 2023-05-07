@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Producten</title>
+</head>
+<body>
+
+	<p th:if="${verschil}" th:text="|Prijzen zijn verhoogd met ${verschil}%|"></p>
+	<h1>Producten</h1>
+	<p  th:each="product: ${productList}"  th:text="|${product.description} ${#numbers.formatDecimal(product.price, 1,2)}&euro;|">
+	</p>
+	<br>
+
+	<a href="/increaseDecrease" th:text="|Wijzig prijs|"     ></a>
+
+</body>
+</html>
